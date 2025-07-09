@@ -61,7 +61,13 @@ abstract class MarkdownComponent {
             dotAll: each.exp.isDotAll,
           );
           if (exp.hasMatch(element)) {
-            spans.add(each.span(context, element, config));
+            spans.add(
+              each.span(
+                context,
+                element,
+                config.copyWith(textScaler: TextScaler.linear(1.0)),
+              ),
+            );
             return "";
           }
         }
