@@ -897,7 +897,7 @@ class ATagMd extends InlineMd {
         },
         text: linkText,
         config: config,
-        child: config.getRich(linkTextSpan),
+        // child: config.getRich(linkTextSpan),
       ),
     );
     var textSpan = TextSpan(children: [child, ...endingSpans]);
